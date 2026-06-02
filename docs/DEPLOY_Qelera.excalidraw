@@ -1,0 +1,101 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "hermes-agent",
+  "elements": [
+    {"type":"text","id":"t_title","x":250,"y":15,"text":"VISIONTRACK — DEPLOYMENT TOPOLOGY","fontSize":24,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"VISIONTRACK DEPLOYMENT TOPOLOGY","autoResize":true},
+
+    {"type":"rectangle","id":"r_cloud","x":50,"y":60,"width":300,"height":400,"strokeColor":"#1e1e1e","strokeWidth":2,"fillStyle":"none","strokeStyle":"dashed","roundness":{"type":2}},
+    {"type":"text","id":"t_cloud","x":60,"y":70,"text":"CLOUD (AWS/GCP)","fontSize":18,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"CLOUD (AWS/GCP)","autoResize":true},
+
+    {"type":"rectangle","id":"r_lb","x":80,"y":100,"width":120,"height":60,"roundness":{"type":3},"backgroundColor":"#a5d8ff","fillStyle":"solid","boundElements":[{"id":"t_rlb","type":"text"}]},
+    {"type":"text","id":"t_rlb","x":95,"y":110,"width":90,"height":25,"text":"Load Balancer","fontSize":16,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_lb","originalText":"Load Balancer","autoResize":true},
+
+    {"type":"rectangle","id":"r_api1","x":80,"y":190,"width":120,"height":60,"roundness":{"type":3},"backgroundColor":"#b2f2bb","fillStyle":"solid","boundElements":[{"id":"t_ra1","type":"text"}]},
+    {"type":"text","id":"t_ra1","x":95,"y":200,"width":90,"height":25,"text":"API Pod 1","fontSize":16,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_api1","originalText":"API Pod 1","autoResize":true},
+
+    {"type":"rectangle","id":"r_api2","x":220,"y":190,"width":120,"height":60,"roundness":{"type":3},"backgroundColor":"#b2f2bb","fillStyle":"solid","boundElements":[{"id":"t_ra2","type":"text"}]},
+    {"type":"text","id":"t_ra2","x":235,"y":200,"width":90,"height":25,"text":"API Pod 2","fontSize":16,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_api2","originalText":"API Pod 2","autoResize":true},
+
+    {"type":"rectangle","id":"r_redis","x":80,"y":290,"width":120,"height":60,"roundness":{"type":3},"backgroundColor":"#c3fae8","fillStyle":"solid","boundElements":[{"id":"t_rr","type":"text"}]},
+    {"type":"text","id":"t_rr","x":95,"y":300,"width":90,"height":25,"text":"Redis Cluster","fontSize":16,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_redis","originalText":"Redis Cluster","autoResize":true},
+
+    {"type":"rectangle","id":"r_pg","x":220,"y":290,"width":120,"height":60,"roundness":{"type":3},"backgroundColor":"#c3fae8","fillStyle":"solid","boundElements":[{"id":"t_rp","type":"text"}]},
+    {"type":"text","id":"t_rp","x":235,"y":300,"width":90,"height":25,"text":"PostgreSQL","fontSize":16,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_pg","originalText":"PostgreSQL","autoResize":true},
+
+    {"type":"arrow","id":"a_lb1","x":140,"y":160,"width":0,"height":30,"points":[[0,0],[0,30]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_alb1","type":"text"}]},
+    {"type":"arrow","id":"a_lb2","x":140,"y":160,"width":140,"height":30,"points":[[0,0],[140,30]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_alb2","type":"text"}]},
+
+    {"type":"arrow","id":"a_r1","x":140,"y":250,"width":0,"height":40,"points":[[0,0],[0,40]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_ar1","type":"text"}]},
+    {"type":"arrow","id":"a_r2","x":280,"y":250,"width":0,"height":40,"points":[[0,0],[0,40]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_ar2","type":"text"}]},
+
+    {"type":"arrow","id":"a_p1","x":140,"y":350,"width":140,"height":0,"points":[[0,0],[140,0]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_ap1","type":"text"}]},
+
+    {"type":"rectangle","id":"r_edge","x":450,"y":60,"width":300,"height":250,"strokeColor":"#1e1e1e","strokeWidth":2,"fillStyle":"none","strokeStyle":"dashed","roundness":{"type":2}},
+    {"type":"text","id":"t_edge","x":460,"y":70,"text":"EDGE (On-Prem / Colocated)","fontSize":18,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"EDGE (On-Prem / Colocated)","autoResize":true},
+
+    {"type":"rectangle","id":"r_edge_api","x":480,"y":100,"width":120,"height":60,"roundness":{"type":3},"backgroundColor":"#a5d8ff","fillStyle":"solid","boundElements":[{"id":"t_rea","type":"text"}]},
+    {"type":"text","id":"t_rea","x":495,"y":110,"width":90,"height":25,"text":"Edge Agent","fontSize":16,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_edge_api","originalText":"Edge Agent","autoResize":true},
+
+    {"type":"rectangle","id":"r_edge_pipe","x":620,"y":100,"width":120,"height":60,"roundness":{"type":3},"backgroundColor":"#d0bfff","fillStyle":"solid","boundElements":[{"id":"t_rep","type":"text"}]},
+    {"type":"text","id":"t_rep","x":635,"y":110,"width":90,"height":25,"text":"Detection Pipe","fontSize":16,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_edge_pipe","originalText":"Detection Pipe","autoResize":true},
+
+    {"type":"rectangle","id":"r_edge_db","x":480,"y":190,"width":120,"height":60,"roundness":{"type":3},"backgroundColor":"#c3fae8","fillStyle":"solid","boundElements":[{"id":"t_red","type":"text"}]},
+    {"type":"text","id":"t_red","x":495,"y":200,"width":90,"height":25,"text":"Edge Cache","fontSize":16,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_edge_db","originalText":"Edge Cache","autoResize":true},
+
+    {"type":"rectangle","id":"r_edge_hw","x":620,"y":190,"width":120,"height":60,"roundness":{"type":3},"backgroundColor":"#ffd8a8","fillStyle":"solid","boundElements":[{"id":"t_reh","type":"text"}]},
+    {"type":"text","id":"t_reh","x":635,"y":200,"width":90,"height":25,"text":"Capture HW","fontSize":16,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_edge_hw","originalText":"Capture HW","autoResize":true},
+
+    {"type":"arrow","id":"a_e1","x":600,"y":130,"width":20,"height":0,"points":[[0,0],[20,0]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_ae1","type":"text"}]},
+    {"type":"arrow","id":"a_e2","x":540,"y":160,"width":80,"height":30,"points":[[0,0],[0,30]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_ae2","type":"text"}]},
+    {"type":"arrow","id":"a_e3","x":680,"y":160,"width":80,"height":30,"points":[[0,0],[0,30]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_ae3","type":"text"}]},
+
+    {"type":"rectangle","id":"r_devices","x":850,"y":60,"width":300,"height":250,"strokeColor":"#1e1e1e","strokeWidth":2,"fillStyle":"none","strokeStyle":"dashed","roundness":{"type":2}},
+    {"type":"text","id":"t_devices","x":860,"y":70,"text":"TEST DEVICES","fontSize":18,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"TEST DEVICES","autoResize":true},
+
+    {"type":"rectangle","id":"r_a1","x":880,"y":100,"width":100,"height":60,"roundness":{"type":3},"backgroundColor":"#b2f2bb","fillStyle":"solid","boundElements":[{"id":"t_raa1","type":"text"}]},
+    {"type":"text","id":"t_raa1","x":895,"y":110,"width":70,"height":25,"text":"Android A","fontSize":16,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_a1","originalText":"Android A","autoResize":true},
+
+    {"type":"rectangle","id":"r_a2","x":880,"y":190,"width":100,"height":60,"roundness":{"type":3},"backgroundColor":"#b2f2bb","fillStyle":"solid","boundElements":[{"id":"t_raa2","type":"text"}]},
+    {"type":"text","id":"t_raa2","x":895,"y":200,"width":70,"height":25,"text":"Android B","fontSize":16,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_a2","originalText":"Android B","autoResize":true},
+
+    {"type":"rectangle","id":"r_i1","x":1020,"y":100,"width":100,"height":60,"roundness":{"type":3},"backgroundColor":"#b2f2bb","fillStyle":"solid","boundElements":[{"id":"t_rai1","type":"text"}]},
+    {"type":"text","id":"t_rai1","x":1035,"y":110,"width":70,"height":25,"text":"iOS 1","fontSize":16,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_i1","originalText":"iOS 1","autoResize":true},
+
+    {"type":"rectangle","id":"r_i2","x":1020,"y":190,"width":100,"height":60,"roundness":{"type":3},"backgroundColor":"#b2f2bb","fillStyle":"solid","boundElements":[{"id":"t_rai2","type":"text"}]},
+    {"type":"text","id":"t_rai2","x":1035,"y":200,"width":70,"height":25,"text":"iOS 2","fontSize":16,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_i2","originalText":"iOS 2","autoResize":true},
+
+    {"type":"arrow","id":"a_d1","x":930,"y":160,"width":90,"height":0,"points":[[0,0],[90,0]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_ad1","type":"text"}]},
+    {"type":"text","id":"t_ad1","x":940,"y":145,"width":60,"height":20,"text":"HDMI","fontSize":14,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"a_d1","originalText":"HDMI","autoResize":true},
+
+    {"type":"arrow","id":"a_d2","x":930,"y":250,"width":90,"height":0,"points":[[0,0],[90,0]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_ad2","type":"text"}]},
+    {"type":"text","id":"t_ad2","x":940,"y":235,"width":60,"height":20,"text":"HDMI","fontSize":14,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"a_d2","originalText":"HDMI","autoResize":true},
+
+    {"type":"arrow","id":"a_d3","x":1070,"y":160,"width":90,"height":0,"points":[[0,0],[90,0]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_ad3","type":"text"}]},
+    {"type":"text","id":"t_ad3","x":1080,"y":145,"width":60,"height":20,"text":"Camera","fontSize":14,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"a_d3","originalText":"Camera","autoResize":true},
+
+    {"type":"arrow","id":"a_d4","x":1070,"y":250,"width":90,"height":0,"points":[[0,0],[90,0]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_ad4","type":"text"}]},
+    {"type":"text","id":"t_ad4","x":1080,"y":235,"width":60,"height":20,"text":"Camera","fontSize":14,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"a_d4","originalText":"Camera","autoResize":true},
+
+    {"type":"arrow","id":"a_c1","x":350,"y":200,"width":100,"height":0,"points":[[0,0],[100,0]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_ac1","type":"text"}]},
+    {"type":"text","id":"t_ac1","x":370,"y":185,"width":60,"height":20,"text":"TCP/IP","fontSize":14,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"a_c1","originalText":"TCP/IP","autoResize":true},
+
+    {"type":"arrow","id":"a_c2","x":350,"y":280,"width":100,"height":0,"points":[[0,0],[100,0]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_ac2","type":"text"}]},
+    {"type":"text","id":"t_ac2","x":370,"y":265,"width":60,"height":20,"text":"USB-Ether","fontSize":14,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"a_c2","originalText":"USB-Ether","autoResize":true},
+
+    {"type":"arrow","id":"a_c3","x":750,"y":130,"width":100,"height":0,"points":[[0,0],[100,0]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_ac3","type":"text"}]},
+    {"type":"text","id":"t_ac3","x":770,"y":115,"width":60,"height":20,"text":"USB 3.0","fontSize":14,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"a_c3","originalText":"USB 3.0","autoResize":true},
+
+    {"type":"arrow","id":"a_c4","x":750,"y":220,"width":100,"height":0,"points":[[0,0],[100,0]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_ac4","type":"text"}]},
+    {"type":"text","id":"t_ac4","x":770,"y":205,"width":60,"height":20,"text":"USB 3.0","fontSize":14,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"a_c4","originalText":"USB 3.0","autoResize":true},
+
+    {"type":"rectangle","id":"r_dash","x":50,"y":520,"width":300,"height":60,"roundness":{"type":3},"backgroundColor":"#a5d8ff","fillStyle":"solid","boundElements":[{"id":"t_rdash","type":"text"}]},
+    {"type":"text","id":"t_rdash","x":80,"y":530,"width":240,"height":25,"text":"Web Dashboard (React + WebSocket)","fontSize":16,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_dash","originalText":"Web Dashboard (React + WebSocket)","autoResize":true},
+
+    {"type":"arrow","id":"a_dash1","x":200,"y":460,"width":0,"height=":60,"points":[[0,0],[0,60]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_adash1","type":"text"}]},
+    {"type":"text","id":"t_adash1","x":180,"y":480,"width":40,"height":20,"text":"WS","fontSize":14,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"a_dash1","originalText":"WS","autoResize":true}
+  ],
+  "appState": {
+    "viewBackgroundColor": "#ffffff"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "hermes-agent",
+  "elements": [
+    {"type":"text","id":"t_title","x":250,"y":15,"text":"VISIONTRACK — ADVANCED ARCHITECTURE (PHD-LEVEL)","fontSize":24,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"VISIONTRACK ADVANCED ARCHITECTURE (PHD-LEVEL)","autoResize":true},
+
+    {"type":"rectangle","id":"r_client","x":20,"y":60,"width":380,"height":500,"strokeColor":"#1e1e1e","strokeWidth":2,"fillStyle":"none","strokeStyle":"dashed","roundness":{"type":2}},
+    {"type":"text","id":"t_client","x":30,"y":70,"text":"CLIENT LAYER (DEVICE AGNOSTIC)","fontSize":18,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"CLIENT LAYER (DEVICE AGNOSTIC)","autoResize":true},
+
+    {"type":"rectangle","id":"r_android","x":40,"y":90,"width":160,"height":80,"roundness":{"type":3},"backgroundColor":"#b2f2bb","fillStyle":"solid","boundElements":[{"id":"t_ra","type":"text"}]},
+    {"type":"text","id":"t_ra","x":55,"y":100,"width":130,"height":60,"text":"Android SDK\n(API 24+)","fontSize":14,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_android","originalText":"Android SDK\n(API 24+)","autoResize":true},
+
+    {"type":"rectangle","id":"r_ios","x":220,"y":90,"width":160,"height":80,"roundness":{"type":3},"backgroundColor":"#b2f2bb","fillStyle":"solid","boundElements":[{"id":"t_ri","type":"text"}]},
+    {"type":"text","id":"t_ri","x":235,"y":100,"width":130,"height":60,"text":"iOS SDK\n(iOS 13+)","fontSize":14,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_ios","originalText":"iOS SDK\n(iOS 13+)","autoResize":true},
+
+    {"type":"rectangle","id":"r_sensor","x":40,"y":200,"width":340,"height":100,"roundness":{"type":3},"backgroundColor":"#ffd8a8","fillStyle":"solid","boundElements":[{"id":"t_rs","type":"text"}]},
+    {"type":"text","id":"t_rs","x":55,"y":210,"width":310,"height":80,"text":"Multi-Modal Sensor Fusion Engine\n• Camera (RGB + IR) • IMU (6-axis) • Audio (Mic Array)\n• GPS • WiFi RSSI • Bluetooth Beacon • NFC","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_sensor","originalText":"Multi-Modal Sensor Fusion Engine\n• Camera (RGB + IR) • IMU (6-axis) • Audio (Mic Array)\n• GPS • WiFi RSSI • Bluetooth Beacon • NFC","autoResize":true},
+
+    {"type":"rectangle","id":"r_edge_ai","x":40,"y":330,"width":340,"height":100,"roundness":{"type":3},"backgroundColor":"#d0bfff","fillStyle":"solid","boundElements":[{"id":"t_re","type":"text"}]},
+    {"type":"text","id":"t_re","x":55,"y":340,"width":310,"height":80,"text":"Edge AI Acceleration\n• TensorFlow Lite / CoreML / NNAPI\n• Quantized Models (INT8)\n• Real-time Object Detection (YOLOv8-nano)\n• Federated Learning Client","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_edge_ai","originalText":"Edge AI Acceleration\n• TensorFlow Lite / CoreML / NNAPI\n• Quantized Models (INT8)\n• Real-time Object Detection (YOLOv8-nano)\n• Federated Learning Client","autoResize":true},
+
+    {"type":"rectangle","id":"r_metrics","x":40,"y":460,"width":340,"height":80,"roundness":{"type":3},"backgroundColor":"#a5d8ff","fillStyle":"solid","boundElements":[{"id":"t_rm","type":"text"}]},
+    {"type":"text","id":"t_rm","x":55,"y":470,"width":310,"height":60,"text":"QoE Metrics Engine\n• ITU-T P.1203 Model\n• Netflix QoE Score\n• Latency, Jitter, Packet Loss\n• Video Quality (PSNR, SSIM)","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_metrics","originalText":"QoE Metrics Engine\n• ITU-T P.1203 Model\n• Netflix QoE Score\n• Latency, Jitter, Packet Loss\n• Video Quality (PSNR, SSIM)","autoResize":true},
+
+    {"type":"rectangle","id":"r_cloud","x":450,"y":60,"width":380,"height":500,"strokeColor":"#1e1e1e","strokeWidth":2,"fillStyle":"none","strokeStyle":"dashed","roundness":{"type":2}},
+    {"type":"text","id":"t_cloud","x":460,"y":70,"text":"CLOUD SERVICES (MICROSERVICES)","fontSize":18,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"CLOUD SERVICES (MICROSERVICES)","autoResize":true},
+
+    {"type":"rectangle","id":"r_gateway","x":470,"y":90,"width":160,"height":60,"roundness":{"type":3},"backgroundColor":"#a5d8ff","fillStyle":"solid","boundElements":[{"id":"t_rg","type":"text"}]},
+    {"type":"text","id":"t_rg","x":485,"y":100,"width":130,"height":40,"text":"API Gateway\n(Kong + OAuth2)","fontSize":14,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_gateway","originalText":"API Gateway\n(Kong + OAuth2)","autoResize":true},
+
+    {"type":"rectangle","id":"r_auth","x":670,"y":90,"width":140,"height":60,"roundness":{"type":3},"backgroundColor":"#a5d8ff","fillStyle":"solid","boundElements":[{"id":"t_rauth","type":"text"}]},
+    {"type":"text","id":"t_rauth","x":685,"y":100,"width":110,"height":40,"text":"Auth Service\n(JWT + MFA)","fontSize":14,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_auth","originalText":"Auth Service\n(JWT + MFA)","autoResize":true},
+
+    {"type":"rectangle","id":"r_task","x":470,"y":180,"width":160,"height":60,"roundness":{"type":3},"backgroundColor":"#b2f2bb","fillStyle":"solid","boundElements":[{"id":"t_rt","type":"text"}]},
+    {"type":"text","id":"t_rt","x":485,"y":190,"width":130,"height":40,"text":"Task Scheduler\n(Celery + Redis)","fontSize":14,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_task","originalText":"Task Scheduler\n(Celery + Redis)","autoResize":true},
+
+    {"type":"rectangle","id":"r_device","x":670,"y":180,"width":140,"height":60,"roundness":{"type":3},"backgroundColor":"#b2f2bb","fillStyle":"solid","boundElements":[{"id":"t_rd","type":"text"}]},
+    {"type":"text","id":"t_rd","x":685,"y":190,"width":110,"height":40,"text":"Device Manager\n(OTA Updates)","fontSize":14,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_device","originalText":"Device Manager\n(OTA Updates)","autoResize":true},
+
+    {"type":"rectangle","id":"r_stream","x":470,"y":270,"width":340,"height":80,"roundness":{"type":3},"backgroundColor":"#c3fae8","fillStyle":"solid","boundElements":[{"id":"t_rst","type":"text"}]},
+    {"type":"text","id":"t_rst","x":485,"y":280,"width":310,"height":60,"text":"Real-Time Stream Processing\n• Apache Kafka / Redis Streams\n• Event-Driven Architecture\n• WebSocket Push Notifications\n• Real-Time Analytics Pipeline","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_stream","originalText":"Real-Time Stream Processing\n• Apache Kafka / Redis Streams\n• Event-Driven Architecture\n• WebSocket Push Notifications\n• Real-Time Analytics Pipeline","autoResize":true},
+
+    {"type":"rectangle","id":"r_analytics","x":470,"y":380,"width":340,"height":80,"roundness":{"type":3},"backgroundColor":"#d0bfff","fillStyle":"solid","boundElements":[{"id":"t_ran","type":"text"}]},
+    {"type":"text","id":"t_ran","x":485,"y":390,"width":310,"height":60,"text":"Advanced Analytics Engine\n• ML Models (XGBoost, LSTM)\n• Anomaly Detection\n• Predictive QoE Modeling\n• Digital Twin Simulation","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_analytics","originalText":"Advanced Analytics Engine\n• ML Models (XGBoost, LSTM)\n• Anomaly Detection\n• Predictive QoE Modeling\n• Digital Twin Simulation","autoResize":true},
+
+    {"type":"rectangle","id":"r_fed","x":470,"y":480,"width":340,"height":60,"roundness":{"type":3},"backgroundColor":"#ffd8a8","fillStyle":"solid","boundElements":[{"id":"t_rf","type":"text"}]},
+    {"type":"text","id":"t_rf","x":485,"y":490,"width":310,"height":40,"text":"Federated Learning Orchestrator\n• Secure Aggregation (SecAgg)\n• Differential Privacy (ε=0.1)\n• Model Versioning (MLflow)","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_fed","originalText":"Federated Learning Orchestrator\n• Secure Aggregation (SecAgg)\n• Differential Privacy (ε=0.1)\n• Model Versioning (MLflow)","autoResize":true},
+
+    {"type":"rectangle","id":"r_storage","x":450,"y":600,"width":380,"height":100,"strokeColor":"#1e1e1e","strokeWidth":2,"fillStyle":"none","strokeStyle":"dashed","roundness":{"type":2}},
+    {"type":"text","id":"t_storage","x":460,"y":610,"text":"DATA LAYER","fontSize":18,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"DATA LAYER","autoResize":true},
+
+    {"type":"rectangle","id":"r_pg","x":470,"y":630,"width":110,"height":60,"roundness":{"type":3},"backgroundColor":"#c3fae8","fillStyle":"solid","boundElements":[{"id":"t_rp","type":"text"}]},
+    {"type":"text","id":"t_rp","x":485,"y":640,"width":80,"height":40,"text":"PostgreSQL\n(TimescaleDB)","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_pg","originalText":"PostgreSQL\n(TimescaleDB)","autoResize":true},
+
+    {"type":"rectangle","id":"r_redis","x":600,"y":630,"width":110,"height":60,"roundness":{"type":3},"backgroundColor":"#c3fae8","fillStyle":"solid","boundElements":[{"id":"t_rr","type":"text"}]},
+    {"type":"text","id":"t_rr","x":615,"y":640,"width":80,"height":40,"text":"Redis Cluster\n(Streams + Cache)","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_redis","originalText":"Redis Cluster\n(Streams + Cache)","autoResize":true},
+
+    {"type":"rectangle","id":"r_s3","x":730,"y":630,"width":90,"height":60,"roundness":{"type":3},"backgroundColor":"#c3fae8","fillStyle":"solid","boundElements":[{"id":"t_rs3","type":"text"}]},
+    {"type":"text","id":"t_rs3","x":745,"y":640,"width":60,"height":40,"text":"S3/GCS\n(Object Store)","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_s3","originalText":"S3/GCS\n(Object Store)","autoResize":true},
+
+    {"type":"arrow","id":"a_c1","x":400,"y":120,"width":50,"height":0,"points":[[0,0],[50,0]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_ac1","type":"text"}]},
+    {"type":"text","id":"t_ac1","x":415,"y":105,"width":20,"height":20,"text":"TLS","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"a_c1","originalText":"TLS","autoResize":true},
+
+    {"type":"arrow","id":"a_c2","x":400,"y":250,"width":50,"height":0,"points":[[0,0],[50,0]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_ac2","type":"text"}]},
+    {"type":"text","id":"t_ac2","x":415,"y":235,"width":20,"height":20,"text":"MQTT","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"a_c2","originalText":"MQTT","autoResize":true},
+
+    {"type":"arrow","id":"a_c3","x":400,"y":380,"width":50,"height":0,"points":[[0,0],[50,0]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_ac3","type":"text"}]},
+    {"type":"text","id":"t_ac3","x":415,"y":365,"width":20,"height":20,"text":"gRPC","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"a_c3","originalText":"gRPC","autoResize":true},
+
+    {"type":"arrow","id":"a_c4","x":400,"y":500,"width":50,"height":0,"points":[[0,0],[50,0]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_ac4","type":"text"}]},
+    {"type":"text","id":"t_ac4","x":415,"y":485,"width":20,"height":20,"text":"WebSocket","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"a_c4","originalText":"WebSocket","autoResize":true},
+
+    {"type":"arrow","id":"a_c5","x":400,"y":640,"width":50,"height":0,"points":[[0,0],[50,0]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_ac5","type":"text"}]},
+    {"type":"text","id":"t_ac5","x":415,"y":625,"width":20,"height":20,"text":"HTTPS","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"a_c5","originalText":"HTTPS","autoResize":true},
+
+    {"type":"text","id":"t_research","x":20,"y":600,"text":"PHD-LEVEL RESEARCH FOUNDATIONS","fontSize":16,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"PHD-LEVEL RESEARCH FOUNDATIONS","autoResize":true},
+    {"type":"text","id":"t_r1","x":30,"y":625,"text":"• Multi-Modal Sensor Fusion (Zhang et al. 2023)","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"• Multi-Modal Sensor Fusion (Zhang et al. 2023)","autoResize":true},
+    {"type":"text","id":"t_r2","x":30,"y":645,"text":"• Federated Learning (McMahan et al. 2017)","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"• Federated Learning (McMahan et al. 2017)","autoResize":true},
+    {"type":"text","id":"t_r3","x":30,"y":665,"text":"• QoE Modeling (ITU-T P.1203, Netflix 2020)","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"• QoE Modeling (ITU-T P.1203, Netflix 2020)","autoResize":true},
+    {"type":"text","id":"t_r4","x":30,"y":685,"text":"• Edge AI Acceleration (TensorFlow Lite, 2023)","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"• Edge AI Acceleration (TensorFlow Lite, 2023)","autoResize":true},
+    {"type":"text","id":"t_r5","x":30,"y":705,"text":"• Digital Twin Simulation (Grieber 2022)","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"• Digital Twin Simulation (Grieber 2022)","autoResize":true},
+    {"type":"text","id":"t_r6","x":30,"y":725,"text":"• Real-Time Video Analytics (YOLOv8, 2024)","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"• Real-Time Video Analytics (YOLOv8, 2024)","autoResize":true}
+  ],
+  "appState": {
+    "viewBackgroundColor": "#ffffff"
+  }
+}

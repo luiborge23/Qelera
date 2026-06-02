@@ -1,0 +1,212 @@
+# Qelera — ELK Stack Docker Configuration v1.0
+# Elasticsearch 8.x, Logstash 8.x, Kibana 8.x
+# Created: May 28, 2026
+
+version: '3.8'
+
+networks:
+  elk:
+    driver: bridge
+  qelera:
+    external: true
+
+volumes:
+  es_data:
+    driver: local
+  logstash_data:
+    driver: local
+  kibana_data:
+    driver: local
+
+services:
+  # ============================================================
+  # ELASTICSEARCH
+  # ============================================================
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.15.0
+    container_name: qelera-es
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=true
+      - xpack.security.enrollment.enabled=false
+      - xpack.security.http.ssl.enabled=false
+      - xpack.security.transport.ssl.enabled=false
+      - ES_JAVA_OPTS=-Xms1g -Xmx1g
+      - cluster.name=qelera-cluster
+      - node.name=es-node-1
+      - path.data=/usr/share/elasticsearch/data
+      - path.logs=/usr/share/elasticsearch/logs
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - es_data:/usr/share/elasticsearch/data
+    networks:
+      - elk
+      - qelera
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9200/_cluster/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    deploy:
+      resources:
+        limits:
+          memory: 4g
+
+  # ============================================================
+  # LOGSTASH
+  # ============================================================
+  logstash:
+    image: docker.elastic.co/logstash/logstash:8.15.0
+    container_name: qelera-logstash
+    environment:
+      - LS_JAVA_OPTS=-Xms512m -Xmx512m
+    ports:
+      - "5044:5044"  # Beats input
+      - "5000:5000/tcp"  # TCP input
+      - "5000:5000/udp"  # UDP input
+      - "9600:9600"  # Monitoring
+    volumes:
+      - ./logstash/pipeline:/usr/share/logstash/pipeline:ro
+      - logstash_data:/usr/share/logstash/data
+    networks:
+      - elk
+      - qelera
+    restart: unless-stopped
+    depends_on:
+      elasticsearch:
+        condition: service_healthy
+    deploy:
+      resources:
+        limits:
+          memory: 2g
+
+  # ============================================================
+  # KIBANA
+  # ============================================================
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.15.0
+    container_name: qelera-kibana
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+      - ELASTICSEARCH_USERNAME=kibana_system
+      - ELASTICSEARCH_PASSWORD=kibana_password
+      - SERVER_NAME=kibana
+      - SERVER_HOST=0.0.0.0
+      - SERVER_PORT=5601
+      - XPACK_SECURITY_ENABLED=true
+      - XPACK_SECURITY_ENROLLMENT_ENABLED=false
+      - XPACK_FLEET_ISAVAILABLE=true
+    ports:
+      - "5601:5601"
+    volumes:
+      - kibana_data:/usr/share/kibana/data
+    networks:
+      - elk
+      - qelera
+    restart: unless-stopped
+    depends_on:
+      elasticsearch:
+        condition: service_healthy
+    deploy:
+      resources:
+        limits:
+          memory: 2g
+
+# ============================================================
+# LOGSTASH PIPELINE CONFIGURATION
+# ============================================================
+# Place in ./logstash/pipeline/qelera.conf:
+#
+# input {
+#   beats {
+#     port => 5044
+#   }
+#   tcp {
+#     port => 5000
+#     codec => json
+#   }
+#   udp {
+#     port => 5000
+#     codec => json
+#   }
+# }
+#
+# filter {
+#   # Parse JSON logs from backend
+#   if [message] {
+#     json {
+#       source => "message"
+#       target => "parsed"
+#     }
+#   }
+#
+#   # Add metadata
+#   mutate {
+#     add_field => {
+#       "environment" => "production"
+#       "service" => "qelera"
+#     }
+#   }
+#
+#   # GeoIP for device locations
+#   if [device_location] {
+#     geoip {
+#       source => "device_location"
+#       target => "device_geoip"
+#     }
+#   }
+#
+#   # Date parsing
+#   date {
+#     match => ["@timestamp", "ISO8601", "yyyy-MM-dd HH:mm:ss.SSS Z"]
+#     target => "@timestamp"
+#   }
+# }
+#
+# output {
+#   elasticsearch {
+#     hosts => ["http://elasticsearch:9200"]
+#     index => "qelera-%{+YYYY.MM.dd}"
+#     user => "elastic"
+#     password => "changeme"
+#     ssl => false
+#   }
+#
+#   # Debug output
+#   stdout {
+#     codec => rubydebug
+#   }
+# }
+
+# ============================================================
+# ELASTICSEARCH INDEX TEMPLATES
+# ============================================================
+# Place in ./elasticsearch/templates/
+#
+# qoe_metrics_template.json:
+# {
+#   "index_patterns": ["qelera-qoe-*"],
+#   "settings": {
+#     "number_of_shards": 3,
+#     "number_of_replicas": 1,
+#     "refresh_interval": "5s"
+#   },
+#   "mappings": {
+#     "properties": {
+#       "time": { "type": "date" },
+#       "session_id": { "type": "keyword" },
+#       "device_id": { "type": "keyword" },
+#       "qoe_score": { "type": "float" },
+#       "psnr": { "type": "float" },
+#       "ssim": { "type": "float" },
+#       "vmaf": { "type": "float" },
+#       "bitrate_bps": { "type": "long" },
+#       "rebuffer_count": { "type": "integer" },
+#       "rtt_ms": { "type": "integer" },
+#       "packet_loss_pct": { "type": "float" }
+#     }
+#   }
+# }

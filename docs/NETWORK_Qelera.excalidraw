@@ -1,0 +1,70 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "hermes-agent",
+  "elements": [
+    {"type":"text","id":"t_title","x":250,"y":15,"text":"VISIONTRACK — NETWORK TOPOLOGY","fontSize":24,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"VISIONTRACK NETWORK TOPOLOGY","autoResize":true},
+
+    {"type":"rectangle","id":"r_edge","x":20,"y":60,"width":380,"height":120,"strokeColor":"#1e1e1e","strokeWidth":2,"fillStyle":"none","strokeStyle":"dashed","roundness":{"type":2}},
+    {"type":"text","id":"t_edge","x":30,"y":70,"text":"EDGE NETWORK (DEVICE LAYER)","fontSize":18,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"EDGE NETWORK (DEVICE LAYER)","autoResize":true},
+
+    {"type":"rectangle","id":"r_5g","x":40,"y":90,"width":170,"height":80,"roundness":{"type":3},"backgroundColor":"#a5d8ff","fillStyle":"solid","boundElements":[{"id":"t_r5","type":"text"}]},
+    {"type":"text","id":"t_r5","x":55,"y":100,"width":140,"height":60,"text":"5G Network\n• mmWave (28GHz)\n• Sub-6GHz\n• Latency <1ms","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_5g","originalText":"5G Network\n• mmWave (28GHz)\n• Sub-6GHz\n• Latency <1ms","autoResize":true},
+
+    {"type":"rectangle","id":"r_wifi","x":230,"y":90,"width":150,"height":80,"roundness":{"type":3},"backgroundColor":"#a5d8ff","fillStyle":"solid","boundElements":[{"id":"t_rw","type":"text"}]},
+    {"type":"text","id":"t_rw","x":245,"y":100,"width":120,"height":60,"text":"WiFi 6/6E/7\n• 6GHz Band\n• OFDMA\n• 10Gbps","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_wifi","originalText":"WiFi 6/6E/7\n• 6GHz Band\n• OFDMA\n• 10Gbps","autoResize":true},
+
+    {"type":"rectangle","id":"r_bluetooth","x":20,"y:200,"width":380,"height":100,"strokeColor":"#1e1e1e","strokeWidth":2,"fillStyle":"none","strokeStyle":"dashed","roundness":{"type":2}},
+    {"type":"text","id":"t_bt","x":30,"y":210,"text":"LOCAL COMMUNICATION","fontSize":18,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"LOCAL COMMUNICATION","autoResize":true},
+
+    {"type":"rectangle","id":"r_ble","x":40,"y":230,"width":170,"height":60,"roundness":{"type":3},"backgroundColor":"#b2f2bb","fillStyle":"solid","boundElements":[{"id":"t_rb","type":"text"}]},
+    {"type":"text","id":"t_rb","x":55,"y":240,"width":140,"height":40,"text":"Bluetooth 5.3\n• LE Audio\n• Direction Finding\n• 2Mbps","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_ble","originalText":"Bluetooth 5.3\n• LE Audio\n• Direction Finding\n• 2Mbps","autoResize":true},
+
+    {"type":"rectangle","id":"r_usb","x":230,"y":230,"width":150,"height":60,"roundness":{"type":3},"backgroundColor":"#b2f2bb","fillStyle":"solid","boundElements":[{"id":"t_ru","type":"text"}]},
+    {"type":"text","id":"t_ru","x":245,"y":240,"width":120,"height":40,"text":"USB 3.2/Thunderbolt\n• 20Gbps\n• Power Delivery\n• Video Out","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_usb","originalText":"USB 3.2/Thunderbolt\n• 20Gbps\n• Power Delivery\n• Video Out","autoResize":true},
+
+    {"type":"rectangle","id":"r_transport","x":20,"y:320,"width":380,"height":120,"strokeColor":"#1e1e1e","strokeWidth":2,"fillStyle":"none","strokeStyle":"dashed","roundness":{"type":2}},
+    {"type":"text","id":"t_trans","x":30,"y":330,"text":"TRANSPORT LAYER","fontSize":18,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"TRANSPORT LAYER","autoResize":true},
+
+    {"type":"rectangle","id":"r_qos","x":40,"y":350,"width":170,"height":80,"roundness":{"type":3},"backgroundColor":"#d0bfff","fillStyle":"solid","boundElements":[{"id":"t_rq","type":"text"}]},
+    {"type":"text","id":"t_rq","x":55,"y":360,"width":140,"height":60,"text":"QoS Management\n• Traffic Shaping\n• Priority Queuing\n• Bandwidth Allocation","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_qos","originalText":"QoS Management\n• Traffic Shaping\n• Priority Queuing\n• Bandwidth Allocation","autoResize":true},
+
+    {"type":"rectangle","id":"r_mux","x":230,"y":350,"width":150,"height":80,"roundness":{"type":3},"backgroundColor":"#d0bfff","fillStyle":"solid","boundElements":[{"id":"t_rmx","type":"text"}]},
+    {"type":"text","id":"t_rmx","x":245,"y":360,"width":120,"height":60,"text":"Protocol Multiplexing\n• HTTP/2\n• QUIC\n• gRPC","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_mux","originalText":"Protocol Multiplexing\n• HTTP/2\n• QUIC\n• gRPC","autoResize":true},
+
+    {"type":"rectangle","id":"r_cloud_net","x":20,"y:460,"width":380,"height":120,"strokeColor":"#1e1e1e","strokeWidth":2,"fillStyle":"none","strokeStyle":"dashed","roundness":{"type":2}},
+    {"type":"text","id":"t_cnet","x":30,"y":470,"text":"CLOUD NETWORK","fontSize":18,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"CLOUD NETWORK","autoResize":true},
+
+    {"type":"rectangle","id":"r_cdn","x":40,"y":490,"width":170,"height":80,"roundness":{"type":3},"backgroundColor":"#c3fae8","fillStyle":"solid","boundElements":[{"id":"t_rcdn","type":"text"}]},
+    {"type":"text","id":"t_rcdn","x":55,"y":500,"width":140,"height":60,"text":"CDN\n• CloudFront/Cloud CDN\n• Edge Caching\n• 200+ PoPs","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_cdn","originalText":"CDN\n• CloudFront/Cloud CDN\n• Edge Caching\n• 200+ PoPs","autoResize":true},
+
+    {"type":"rectangle","id":"r_vpc","x":230,"y":490,"width":150,"height":80,"roundness":{"type":3},"backgroundColor":"#c3fae8","fillStyle":"solid","boundElements":[{"id":"t_rvpc","type":"text"}]},
+    {"type":"text","id":"t_rvpc","x":245,"y":500,"width":120,"height":60,"text":"VPC Network\n• Private Subnets\n• NAT Gateway\n• Transit Gateway","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_vpc","originalText":"VPC Network\n• Private Subnets\n• NAT Gateway\n• Transit Gateway","autoResize":true},
+
+    {"type":"rectangle","id":"r_monitor","x":20,"y:600,"width":380,"height":100,"strokeColor":"#1e1e1e","strokeWidth":2,"fillStyle":"none","strokeStyle":"dashed","roundness":{"type":2}},
+    {"type":"text","id":"t_mon","x":30,"y":610,"text":"NETWORK MONITORING","fontSize":18,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"NETWORK MONITORING","autoResize":true},
+
+    {"type":"rectangle","id":"r_perf","x":40,"y":630,"width":170,"height":60,"roundness":{"type":3},"backgroundColor":"#ffd8a8","fillStyle":"solid","boundElements":[{"id":"t_rpf","type":"text"}]},
+    {"type":"text","id":"t_rpf","x":55,"y":640,"width":140,"height":40,"text":"Performance Metrics\n• Latency\n• Throughput\n• Packet Loss","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_perf","originalText":"Performance Metrics\n• Latency\n• Throughput\n• Packet Loss","autoResize":true},
+
+    {"type":"rectangle","id":"r_health","x":230,"y":630,"width":150,"height":60,"roundness":{"type":3},"backgroundColor":"#ffd8a8","fillStyle":"solid","boundElements":[{"id":"t_rh","type":"text"}]},
+    {"type":"text","id":"t_rh","x":245,"y":640,"width":120,"height":40,"text":"Health Checks\n• TCP/UDP Ping\n• HTTP Health\n• SSL Cert","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_health","originalText":"Health Checks\n• TCP/UDP Ping\n• HTTP Health\n• SSL Cert","autoResize":true},
+
+    {"type":"arrow","id":"a_1","x":210,"y":130,"width":0,"height":70,"points":[[0,0],[0,70]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_a1","type":"text"}]},
+    {"type":"arrow","id":"a_2","x":210,"y":200,"width":0,"height":120,"points":[[0,0],[0,120]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_a2","type":"text"}]},
+    {"type":"arrow","id":"a_3","x":210,"y":320,"width":0,"height":130,"points":[[0,0],[0,130]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_a3","type":"text"}]},
+    {"type":"arrow","id":"a_4","x":210,"y":460,"width":0,"height":130,"points":[[0,0],[0,130]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_a4","type":"text"}]},
+    {"type":"arrow","id":"a_5","x":210,"y":600,"width":0,"height":130,"points":[[0,0],[0,130]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_a5","type":"text"}]},
+
+    {"type":"text","id":"t_research","x":20,"y":740,"text":"PHD-LEVEL RESEARCH FOUNDATIONS","fontSize":16,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"PHD-LEVEL RESEARCH FOUNDATIONS","autoResize":true},
+    {"type":"text","id":"t_r1","x":30,"y":765,"text":"• 5G NR (3GPP Rel-16)","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"• 5G NR (3GPP Rel-16)","autoResize":true},
+    {"type":"text","id":"t_r2","x":30,"y":785,"text":"• WiFi 6/6E (IEEE 802.11ax)","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"• WiFi 6/6E (IEEE 802.11ax)","autoResize":true},
+    {"type":"text","id":"t_r3","x":30,"y":805,"text":"• QUIC (IETF RFC 9000)","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"• QUIC (IETF RFC 9000)","autoResize":true},
+    {"type":"text","id":"t_r4","x":30,"y":825,"text":"• QoS (RFC 2475)","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"• QoS (RFC 2475)","autoResize":true},
+    {"type":"text","id":"t_r5","x":30,"y":845,"text":"• CDN (Katz et al. 2003)","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"• CDN (Katz et al. 2003)","autoResize":true},
+    {"type":"text","id":"t_r6","x":30,"y":865,"text":"• VPC (AWS VPC Design Guide)","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"• VPC (AWS VPC Design Guide)","autoResize":true}
+  ],
+  "appState": {
+    "viewBackgroundColor": "#ffffff"
+  }
+}

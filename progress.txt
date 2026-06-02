@@ -1,0 +1,178 @@
+# Qelera — Progress Tracker
+
+**Last Updated:** 2026-06-01
+**Overall Progress:** ~35% of total scope
+**Current Focus:** Post-Phase 2 — Backend, Frontend, and Advanced Features
+
+---
+
+## Phase 1: MVP (Weeks 1-12) — ~40% Complete
+
+### Week 1-2: Foundation & Environment Setup — ✅ COMPLETE
+- [x] Project directory structure
+- [x] Docker Compose (PostgreSQL/TimescaleDB, Redis, Kafka, Elasticsearch, Vault, Kong)
+- [x] Monitoring stack (Prometheus, Grafana, ELK)
+- [x] Database schema (schema.sql — 17KB, hypertables, continuous aggregates, indexing)
+- [x] Seed data (seed.sql — enterprise workspace, admin user)
+- [x] Vault configuration (AppRole, JWT, Transit engines)
+- [x] Kong API Gateway config (kong.yml)
+- [x] CI/CD pipeline design (TEST_SUITE_ARCHITECTURE.md)
+
+### Week 3-4: Android SDK Core — ✅ COMPLETE
+- [x] VisionTrackEngine.kt — main entry point, session lifecycle
+- [x] CameraCaptureManager.kt — CameraX capture at 30 FPS
+- [x] SensorCollector.kt — IMU, GPS, WiFi, Bluetooth BLE sensors
+- [x] WebSocketClient.kt — real-time push with reconnection
+- [x] MLModelManager.kt — TFLite model loading & inference
+- [x] DataModels.kt — protobuf-style data structures
+- [x] ANDROID_SDK_ARCHITECTURE.md — full SDK design doc (20KB)
+- [x] build-gradle.kts — Gradle build configuration
+
+### Week 5-6: Edge AI & QoE — ✅ COMPLETE
+- [x] ML_PIPELINE_ARCHITECTURE.md — YOLOv8 → ONNX → TFLite pipeline
+- [x] Training scripts (PyTorch, COCO pretrain, custom dataset)
+- [x] INT8 quantization script
+- [x] TFLite export & benchmark scripts
+- [x] Dockerfile for training environment
+- [x] QoE calculator design (ITU-T P.1203, PSNR, SSIM, VMAF)
+
+### Week 7-8: Network & Data Upload — ✅ COMPLETE
+- [x] WebSocketClient.kt — real-time WebSocket connection
+- [x] Offline queue design (SQLite local storage)
+- [x] Retry logic (exponential backoff)
+- [x] TLS 1.3 + mTLS architecture documented
+- [x] Certificate pinning design
+
+### Week 9-10: Backend Services — ❌ NOT STARTED
+- [ ] Auth Service (JWT, OAuth 2.0)
+- [ ] Device Manager (registration, OTA)
+- [ ] Task Scheduler (Celery + Redis)
+- [ ] API endpoints (REST + WebSocket)
+- [ ] Database migration scripts (Alembic)
+- [ ] Kafka producers/consumers
+- [ ] Stream processing (Flink)
+- [ ] Analytics engine (XGBoost)
+- [ ] Anomaly detection service
+- [ ] Dashboard API
+
+### Week 11-12: Testing & Integration — ❌ NOT STARTED
+- [ ] End-to-end integration tests
+- [ ] Performance testing (load, stress)
+- [ ] Security testing (penetration, vulnerability scan)
+- [ ] Unit tests (80%+ coverage)
+- [ ] Android instrumentation tests
+- [ ] UI tests (Espresso)
+- [ ] API documentation (Swagger/OpenAPI)
+- [ ] Beta testing preparation
+
+---
+
+## Phase 2: Advanced Features (Weeks 13-24) — ~60% Complete
+
+### Week 13-16: Federated Learning — ❌ NOT STARTED
+- [ ] FederatedClient (local training)
+- [ ] ModelUpdater (download updates)
+- [ ] SecAggProtocol (secure aggregation)
+- [ ] DifferentialPrivacy (Laplace mechanism)
+- [ ] FL orchestrator (backend)
+- [ ] MLflow integration
+- [ ] Privacy budget tracking
+- [ ] Model evaluation pipeline
+- [ ] Model rollback mechanism
+- [ ] FL monitoring dashboard
+
+### Week 17-20: Predictive Analytics & Digital Twin — ❌ NOT STARTED
+- [ ] LSTM model for QoE prediction
+- [ ] Isolation Forest for anomaly detection
+- [ ] Digital Twin simulation engine
+- [ ] Predictive alerting
+- [ ] Scenario simulation
+- [ ] What-if analysis
+- [ ] Root cause analysis
+- [ ] Predictive maintenance
+- [ ] Dashboard visualizations
+- [ ] Report generation (PDF, CSV)
+
+### Week 21-24: iOS SDK — ❌ NOT STARTED
+- [ ] iOS SDK project (Swift + Objective-C)
+- [ ] Equivalent Android SDK features
+- [ ] CoreML integration for edge AI
+- [ ] Security framework
+- [ ] Combine reactive programming
+- [ ] Swift Package Manager support
+- [ ] Objective-C bridge
+- [ ] iOS unit tests (XCTest)
+- [ ] iOS UI tests (XCUITest)
+- [ ] SOC 2 Type II preparation
+
+---
+
+## Phase 2.1-2.4: Edge Implementation — ✅ 100% COMPLETE
+
+### Phase 2.1: Android SDK — ✅ COMPLETE (7 Kotlin files)
+### Phase 2.2: ML Pipeline — ✅ COMPLETE (Training, export, Dockerfile)
+### Phase 2.3: ESP32 Firmware — ✅ COMPLETE (10 C files + docs)
+### Phase 2.4: Raspberry Pi Gateway — ✅ COMPLETE (8 Python files + docs)
+
+**Total Edge Files:** 31 files across 4 subsystems
+
+---
+
+## Phase 3: Scale & Optimize (Weeks 25-36) — 0% Complete
+
+### Week 25-28: 5G/WiFi 6/7 Support
+### Week 29-32: Multi-Region Deployment
+### Week 33-36: HIPAA & Enterprise Features
+
+---
+
+## Phase 4: Enterprise & Ecosystem (Weeks 37-48) — 0% Complete
+
+### Week 37-40: Partner Integrations
+### Week 41-44: Advanced Reporting & Analytics
+### Week 45-48: Mobile App & Community
+
+---
+
+## Outstanding Work — Priority Order
+
+### 🔴 CRITICAL (Must-Have for Launch)
+1. **Backend API** (Weeks 9-10) — FastAPI services, auth, device management, REST/WebSocket endpoints
+2. **React Dashboard** (see software/frontend/) — Real-time monitoring UI
+3. **Integration Tests** (Week 11-12) — Connect Android SDK → Backend → Dashboard
+4. **API Documentation** — OpenAPI/Swagger spec
+
+### 🟡 HIGH (Phase 2 Advanced)
+5. **Federated Learning** (Weeks 13-16) — Privacy-preserving model updates
+6. **Predictive Analytics** (Weeks 17-20) — LSTM QoE prediction, digital twin
+7. **iOS SDK** (Weeks 21-24) — Cross-platform coverage
+
+### 🟢 MEDIUM (Phase 3+)
+8. **5G/WiFi 6/7** support
+9. **Multi-region deployment**
+10. **HIPAA compliance**
+
+### ⚪ LOW (Phase 4)
+11. Partner integrations, enterprise features, mobile app, developer portal
+
+---
+
+## File Inventory
+
+| Component | Files | Status |
+|-----------|-------|--------|
+| Documentation (docs/) | 6 | ✅ |
+| Database (software/db/) | 2 | ✅ |
+| Infrastructure (software/infrastructure/) | 2 | ✅ |
+| Monitoring (software/monitoring/) | 1 | ✅ |
+| Kong (software/kong/) | 1 | ✅ |
+| Android SDK (software/android/) | 7 | ✅ |
+| ML Pipeline (software/ml/) | 1+ | ✅ |
+| ESP32 Firmware (software/firmware/esp32/) | 10 | ✅ |
+| RPi Gateway (software/firmware/rpi/) | 9 | ✅ |
+| Backend (software/backend/) | 0 | ❌ Not started |
+| Frontend (software/frontend/) | 1 (design doc) | ❌ Not started |
+| Testing (software/testing/) | 1 (architecture) | ❌ Not started |
+
+**Total files created:** 40
+**Total planned files (estimated):** ~120+

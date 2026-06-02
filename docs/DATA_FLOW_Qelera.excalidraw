@@ -1,0 +1,73 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "hermes-agent",
+  "elements": [
+    {"type":"text","id":"t_title","x":250,"y":15,"text":"VISIONTRACK — DATA FLOW & STREAMING","fontSize":24,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"VISIONTRACK DATA FLOW & STREAMING","autoResize":true},
+
+    {"type":"rectangle","id":"r_ingest","x":20,"y":60,"width":380,"height":100,"strokeColor":"#1e1e1e","strokeWidth":2,"fillStyle":"none","strokeStyle":"dashed","roundness":{"type":2}},
+    {"type":"text","id":"t_ing","x":30,"y":70,"text":"DATA INGESTION","fontSize":18,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"DATA INGESTION","autoResize":true},
+
+    {"type":"rectangle","id":"r_kafka","x":40,"y":90,"width":170,"height":60,"roundness":{"type":3},"backgroundColor":"#a5d8ff","fillStyle":"solid","boundElements":[{"id":"t_rk","type":"text"}]},
+    {"type":"text","id":"t_rk","x":55,"y":100,"width":140,"height":40,"text":"Apache Kafka\n• Event Sourcing\n• 10K msg/sec","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_kafka","originalText":"Apache Kafka\n• Event Sourcing\n• 10K msg/sec","autoResize":true},
+
+    {"type":"rectangle","id":"r_schema","x":230,"y":90,"width":150,"height":60,"roundness":{"type":3},"backgroundColor":"#a5d8ff","fillStyle":"solid","boundElements":[{"id":"t_rs","type":"text"}]},
+    {"type":"text","id":"t_rs","x":245,"y":100,"width":120,"height":40,"text":"Schema Registry\n• Avro/Protobuf\n• Validation","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_schema","originalText":"Schema Registry\n• Avro/Protobuf\n• Validation","autoResize":true},
+
+    {"type":"rectangle","id":"r_process","x":20,"y:180,"width":380,"height":120,"strokeColor":"#1e1e1e","strokeWidth":2,"fillStyle":"none","strokeStyle":"dashed","roundness":{"type":2}},
+    {"type":"text","id":"t_proc","x":30,"y":190,"text":"REAL-TIME PROCESSING","fontSize":18,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"REAL-TIME PROCESSING","autoResize":true},
+
+    {"type":"rectangle","id":"r_stream","x":40,"y":210,"width":170,"height":80,"roundness":{"type":3},"backgroundColor":"#b2f2bb","fillStyle":"solid","boundElements":[{"id":"t_rst","type":"text"}]},
+    {"type":"text","id":"t_rst","x":55,"y":220,"width":140,"height":60,"text":"Stream Processing\n• Apache Flink\n• Windowing\n• State Management","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_stream","originalText":"Stream Processing\n• Apache Flink\n• Windowing\n• State Management","autoResize":true},
+
+    {"type":"rectangle","id":"r_aggregate","x":230,"y":210,"width":150,"height":80,"roundness":{"type":3},"backgroundColor":"#b2f2bb","fillStyle":"solid","boundElements":[{"id":"t_ra","type":"text"}]},
+    {"type":"text","id":"t_ra","x":245,"y":220,"width":120,"height":60,"text":"Aggregation\n• Tumbling Windows\n• Session Windows\n• Sliding Windows","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_aggregate","originalText":"Aggregation\n• Tumbling Windows\n• Session Windows\n• Sliding Windows","autoResize":true},
+
+    {"type":"rectangle","id":"r_anomaly","x":20,"y:320,"width":380,"height":100,"strokeColor":"#1e1e1e","strokeWidth":2,"fillStyle":"none","strokeStyle":"dashed","roundness":{"type":2}},
+    {"type":"text","id":"t_anom","x":30,"y":330,"text":"ANOMALY DETECTION","fontSize":18,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"ANOMALY DETECTION","autoResize":true},
+
+    {"type":"rectangle","id":"r_ml","x":40,"y":350,"width":170,"height":60,"roundness":{"type":3},"backgroundColor":"#d0bfff","fillStyle":"solid","boundElements":[{"id":"t_rml","type":"text"}]},
+    {"type":"text","id":"t_rml","x":55,"y":360,"width":140,"height":40,"text":"ML Pipeline\n• Isolation Forest\n• Autoencoder\n• LSTM","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_ml","originalText":"ML Pipeline\n• Isolation Forest\n• Autoencoder\n• LSTM","autoResize":true},
+
+    {"type":"rectangle","id":"r_alert","x":230,"y":350,"width":150,"height":60,"roundness":{"type":3},"backgroundColor":"#d0bfff","fillStyle":"solid","boundElements":[{"id":"t_ral","type":"text"}]},
+    {"type":"text","id":"t_ral","x":245,"y":360,"width":120,"height":40,"text":"Alert Engine\n• Threshold-based\n• ML-based\n• Escalation","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_alert","originalText":"Alert Engine\n• Threshold-based\n• ML-based\n• Escalation","autoResize":true},
+
+    {"type":"rectangle","id":"r_store","x":20,"y:440,"width":380,"height":120,"strokeColor":"#1e1e1e","strokeWidth":2,"fillStyle":"none","strokeStyle":"dashed","roundness":{"type":2}},
+    {"type":"text","id":"t_store","x":30,"y":450,"text":"DATA STORAGE & RETRIEVAL","fontSize":18,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"DATA STORAGE & RETRIEVAL","autoResize":true},
+
+    {"type":"rectangle","id":"r_tsdb","x":40,"y":470,"width":110,"height":80,"roundness":{"type":3},"backgroundColor":"#c3fae8","fillStyle":"solid","boundElements":[{"id":"t_rts","type":"text"}]},
+    {"type":"text","id":"t_rts","x":55,"y":480,"width":80,"height":60,"text":"TimescaleDB\n• Time-Series\n• Hypertables\n• Compression","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_tsdb","originalText":"TimescaleDB\n• Time-Series\n• Hypertables\n• Compression","autoResize":true},
+
+    {"type":"rectangle","id":"r_es","x":170,"y":470,"width":110,"height":80,"roundness":{"type":3},"backgroundColor":"#c3fae8","fillStyle":"solid","boundElements":[{"id":"t_res","type":"text"}]},
+    {"type":"text","id":"t_res","x":185,"y":480,"width":80,"height":60,"text":"Elasticsearch\n• Full-text\n• Aggregations\n• Search","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_es","originalText":"Elasticsearch\n• Full-text\n• Aggregations\n• Search","autoResize":true},
+
+    {"type":"rectangle","id":"r_cache","x":300,"y":470,"width":90,"height":80,"roundness":{"type":3},"backgroundColor":"#c3fae8","fillStyle":"solid","boundElements":[{"id":"t_rc","type":"text"}]},
+    {"type":"text","id":"t_rc","x":315,"y":480,"width":60,"height":60,"text":"Redis\n• Cache\n• Streams\n• Pub/Sub","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_cache","originalText":"Redis\n• Cache\n• Streams\n• Pub/Sub","autoResize":true},
+
+    {"type":"rectangle","id":"r_output","x":20,"y:580,"width":380,"height":100,"strokeColor":"#1e1e1e","strokeWidth":2,"fillStyle":"none","strokeStyle":"dashed","roundness":{"type":2}},
+    {"type":"text","id":"t_out","x":30,"y":590,"text":"OUTPUT & VISUALIZATION","fontSize":18,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"OUTPUT & VISUALIZATION","autoResize":true},
+
+    {"type":"rectangle","id":"r_ws","x":40,"y":610,"width":170,"height":60,"roundness":{"type":3},"backgroundColor":"#ffd8a8","fillStyle":"solid","boundElements":[{"id":"t_rws","type":"text"}]},
+    {"type":"text","id":"t_rws","x":55,"y":620,"width":140,"height":40,"text":"WebSocket Push\n• Real-time Updates\n• Dashboard\n• Alerts","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_ws","originalText":"WebSocket Push\n• Real-time Updates\n• Dashboard\n• Alerts","autoResize":true},
+
+    {"type":"rectangle","id":"r_api","x":230,"y":610,"width":150,"height":60,"roundness":{"type":3},"backgroundColor":"#ffd8a8","fillStyle":"solid","boundElements":[{"id":"t_rapi","type":"text"}]},
+    {"type":"text","id":"t_rapi","x":245,"y":620,"width":120,"height":40,"text":"REST/GraphQL API\n• Queries\n• Reports\n• Export","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_api","originalText":"REST/GraphQL API\n• Queries\n• Reports\n• Export","autoResize":true},
+
+    {"type":"arrow","id":"a_1","x":210,"y":100,"width":0,"height":80,"points":[[0,0],[0,80]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_a1","type":"text"}]},
+    {"type":"arrow","id":"a_2","x":210,"y":180,"width":0,"height":30,"points":[[0,0],[0,30]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_a2","type":"text"}]},
+    {"type":"arrow","id":"a_3","x":210,"y":320,"width":0,"height":30,"points":[[0,0],[0,30]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_a3","type":"text"}]},
+    {"type":"arrow","id":"a_4","x":210,"y":440,"width":0,"height":30,"points":[[0,0],[0,30]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_a4","type":"text"}]},
+    {"type":"arrow","id":"a_5","x":210,"y":580,"width":0,"height":30,"points":[[0,0],[0,30]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_a5","type":"text"}]},
+
+    {"type":"text","id":"t_research","x":20,"y":720,"text":"PHD-LEVEL RESEARCH FOUNDATIONS","fontSize":16,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"PHD-LEVEL RESEARCH FOUNDATIONS","autoResize":true},
+    {"type":"text","id":"t_r1","x":30,"y":745,"text":"• Apache Flink (Kreps et al. 2012)","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"• Apache Flink (Kreps et al. 2012)","autoResize":true},
+    {"type":"text","id":"t_r2","x":30,"y":765,"text":"• Apache Kafka (Narkhede et al. 2010)","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"• Apache Kafka (Narkhede et al. 2010)","autoResize":true},
+    {"type":"text","id":"t_r3","x":30,"y":785,"text":"• TimescaleDB (Timescale 2018)","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"• TimescaleDB (Timescale 2018)","autoResize":true},
+    {"type":"text","id":"t_r4","x":30,"y":805,"text":"• Elasticsearch (Shvachko et al. 2010)","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"• Elasticsearch (Shvachko et al. 2010)","autoResize":true},
+    {"type":"text","id":"t_r5","x":30,"y":825,"text":"• Redis (Shtern 2006)","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"• Redis (Shtern 2006)","autoResize":true},
+    {"type":"text","id":"t_r6","x":30,"y":845,"text":"• WebSocket (IETF RFC 6455)","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"• WebSocket (IETF RFC 6455)","autoResize":true}
+  ],
+  "appState": {
+    "viewBackgroundColor": "#ffffff"
+  }
+}

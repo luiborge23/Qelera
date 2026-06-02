@@ -1,0 +1,70 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "hermes-agent",
+  "elements": [
+    {"type":"text","id":"t_title","x":250,"y":15,"text":"VISIONTRACK — SECURITY ARCHITECTURE","fontSize":24,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"VISIONTRACK SECURITY ARCHITECTURE","autoResize":true},
+
+    {"type":"rectangle","id":"r_zero_trust","x":20,"y":60,"width":380,"height":120,"strokeColor":"#1e1e1e","strokeWidth":2,"fillStyle":"none","strokeStyle":"dashed","roundness":{"type":2}},
+    {"type":"text","id":"t_zero","x":30,"y":70,"text":"ZERO-TRUST ARCHITECTURE","fontSize":18,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"ZERO-TRUST ARCHITECTURE","autoResize":true},
+
+    {"type":"rectangle","id":"r_auth","x":40,"y":90,"width":170,"height":80,"roundness":{"type":3},"backgroundColor":"#a5d8ff","fillStyle":"solid","boundElements":[{"id":"t_ra","type":"text"}]},
+    {"type":"text","id":"t_ra","x":55,"y":100,"width":140,"height":60,"text":"Authentication\n• OAuth 2.0 + OIDC\n• MFA (TOTP/WebAuthn)\n• Biometric Auth","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_auth","originalText":"Authentication\n• OAuth 2.0 + OIDC\n• MFA (TOTP/WebAuthn)\n• Biometric Auth","autoResize":true},
+
+    {"type":"rectangle","id":"r_authorize","x":230,"y":90,"width":150,"height":80,"roundness":{"type":3},"backgroundColor":"#a5d8ff","fillStyle":"solid","boundElements":[{"id":"t_rau","type":"text"}]},
+    {"type":"text","id":"t_rau","x":245,"y":100,"width":120,"height":60,"text":"Authorization\n• RBAC + ABAC\n• JWT Scopes\n• Policy Engine","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_authorize","originalText":"Authorization\n• RBAC + ABAC\n• JWT Scopes\n• Policy Engine","autoResize":true},
+
+    {"type":"rectangle","id":"r_encryption","x":20,"y:200,"width":380,"height":120,"strokeColor":"#1e1e1e","strokeWidth":2,"fillStyle":"none","strokeStyle":"dashed","roundness":{"type":2}},
+    {"type":"text","id":"t_enc","x":30,"y":210,"text":"END-TO-END ENCRYPTION","fontSize":18,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"END-TO-END ENCRYPTION","autoResize":true},
+
+    {"type":"rectangle","id":"r_tls","x":40,"y":230,"width":170,"height":80,"roundness":{"type":3},"backgroundColor":"#b2f2bb","fillStyle":"solid","boundElements":[{"id":"t_rtl","type":"text"}]},
+    {"type":"text","id":"t_rtl","x":55,"y":240,"width":140,"height":60,"text":"Transport Layer\n• TLS 1.3\n• Mutual TLS (mTLS)\n• Certificate Pinning","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_tls","originalText":"Transport Layer\n• TLS 1.3\n• Mutual TLS (mTLS)\n• Certificate Pinning","autoResize":true},
+
+    {"type":"rectangle","id":"r_aes","x":230,"y":230,"width":150,"height":80,"roundness":{"type":3},"backgroundColor":"#b2f2bb","fillStyle":"solid","boundElements":[{"id":"t_rae","type":"text"}]},
+    {"type":"text","id":"t_rae","x":245,"y":240,"width":120,"height":60,"text":"Data at Rest\n• AES-256-GCM\n• Key Rotation\n• HSM/Keystore","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_aes","originalText":"Data at Rest\n• AES-256-GCM\n• Key Rotation\n• HSM/Keystore","autoResize":true},
+
+    {"type":"rectangle","id":"r_privacy","x":20,"y":350,"width":380,"height":120,"strokeColor":"#1e1e1e","strokeWidth":2,"fillStyle":"none","strokeStyle":"dashed","roundness":{"type":2}},
+    {"type":"text","id":"t_priv","x":30,"y":360,"text":"PRIVACY & DATA PROTECTION","fontSize":18,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"PRIVACY & DATA PROTECTION","autoResize":true},
+
+    {"type":"rectangle","id":"r_dp","x":40,"y":380,"width":170,"height":80,"roundness":{"type":3},"backgroundColor":"#d0bfff","fillStyle":"solid","boundElements":[{"id":"t_rdp","type":"text"}]},
+    {"type":"text","id":"t_rdp","x":55,"y":390,"width":140,"height":60,"text":"Differential Privacy\n• ε=0.1, δ=1e-5\n• Laplace Mechanism\n• Privacy Budget","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_dp","originalText":"Differential Privacy\n• ε=0.1, δ=1e-5\n• Laplace Mechanism\n• Privacy Budget","autoResize":true},
+
+    {"type":"rectangle","id":"r_anon","x":230,"y":380,"width":150,"height":80,"roundness":{"type":3},"backgroundColor":"#d0bfff","fillStyle":"solid","boundElements":[{"id":"t_ran","type":"text"}]},
+    {"type":"text","id":"t_ran","x":245,"y":390,"width":120,"height":60,"text":"Data Anonymization\n• K-Anonymity\n• L-Diversity\n• GDPR Compliance","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_anon","originalText":"Data Anonymization\n• K-Anonymity\n• L-Diversity\n• GDPR Compliance","autoResize":true},
+
+    {"type":"rectangle","id":"r_monitor","x":20,"y":500,"width":380,"height":120,"strokeColor":"#1e1e1e","strokeWidth":2,"fillStyle":"none","strokeStyle":"dashed","roundness":{"type":2}},
+    {"type":"text","id":"t_mon","x":30,"y":510,"text":"SECURITY MONITORING & INCIDENT RESPONSE","fontSize":18,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"SECURITY MONITORING & INCIDENT RESPONSE","autoResize":true},
+
+    {"type":"rectangle","id":"r_siem","x":40,"y":530,"width":170,"height":80,"roundness":{"type":3},"backgroundColor":"#ffd8a8","fillStyle":"solid","boundElements":[{"id":"t_rsi","type":"text"}]},
+    {"type":"text","id":"t_rsi","x":55,"y":540,"width":140,"height":60,"text":"SIEM & Logging\n• ELK Stack\n• Audit Trail\n• Real-time Alerts","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_si","originalText":"SIEM & Logging\n• ELK Stack\n• Audit Trail\n• Real-time Alerts","autoResize":true},
+
+    {"type":"rectangle","id":"r_ir","x":230,"y":530,"width":150,"height":80,"roundness":{"type":3},"backgroundColor":"#ffd8a8","fillStyle":"solid","boundElements":[{"id":"t_rir","type":"text"}]},
+    {"type":"text","id":"t_rir","x":245,"y":540,"width":120,"height":60,"text":"Incident Response\n• Automated Playbooks\n• Forensics\n• Recovery","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_ir","originalText":"Incident Response\n• Automated Playbooks\n• Forensics\n• Recovery","autoResize":true},
+
+    {"type":"rectangle","id":"r_compliance","x":20,"y":650,"width":380,"height":120,"strokeColor":"#1e1e1e","strokeWidth":2,"fillStyle":"none","strokeStyle":"dashed","roundness":{"type":2}},
+    {"type":"text","id":"t_comp","x":30,"y":660,"text":"COMPLIANCE & CERTIFICATIONS","fontSize":18,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"COMPLIANCE & CERTIFICATIONS","autoResize":true},
+
+    {"type":"rectangle","id":"r_gdpr","x":40,"y":680,"width":170,"height":80,"roundness":{"type":3},"backgroundColor":"#c3fae8","fillStyle":"solid","boundElements":[{"id":"t_rgd","type":"text"}]},
+    {"type":"text","id":"t_rgd","x":55,"y":690,"width":140,"height":60,"text":"GDPR / CCPA\n• Data Minimization\n• Right to Erasure\n• Data Portability","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_gdpr","originalText":"GDPR / CCPA\n• Data Minimization\n• Right to Erasure\n• Data Portability","autoResize":true},
+
+    {"type":"rectangle","id":"r_soc","x":230,"y":680,"width":150,"height":80,"roundness":{"type":3},"backgroundColor":"#c3fae8","fillStyle":"solid","boundElements":[{"id":"t_rso","type":"text"}]},
+    {"type":"text","id":"t_rso","x":245,"y":690,"width":120,"height":60,"text":"SOC 2 Type II\n• Security\n• Availability\n• Confidentiality","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_soc","originalText":"SOC 2 Type II\n• Security\n• Availability\n• Confidentiality","autoResize":true},
+
+    {"type":"arrow","id":"a_1","x":210,"y":130,"width":0,"height":70,"points":[[0,0],[0,70]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_a1","type":"text"}]},
+    {"type":"arrow","id":"a_2","x":210,"y":200,"width":0,"height":150,"points":[[0,0],[0,150]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_a2","type":"text"}]},
+    {"type":"arrow","id":"a_3","x":210,"y":350,"width":0,"height":150,"points":[[0,0],[0,150]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_a3","type":"text"}]},
+    {"type":"arrow","id":"a_4","x":210,"y":500,"width":0,"height":150,"points":[[0,0],[0,150]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_a4","type":"text"}]},
+    {"type":"arrow","id":"a_5","x":210,"y":650,"width":0,"height":150,"points":[[0,0],[0,150]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_a5","type":"text"}]},
+
+    {"type":"text","id":"t_research","x":20,"y":800,"text":"PHD-LEVEL RESEARCH FOUNDATIONS","fontSize":16,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"PHD-LEVEL RESEARCH FOUNDATIONS","autoResize":true},
+    {"type":"text","id":"t_r1","x":30,"y":825,"text":"• Zero-Trust (NIST SP 800-207)","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"• Zero-Trust (NIST SP 800-207)","autoResize":true},
+    {"type":"text","id":"t_r2","x":30,"y":845,"text":"• Differential Privacy (Dwork 2006)","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"• Differential Privacy (Dwork 2006)","autoResize":true},
+    {"type":"text","id":"t_r3","x":30,"y":865,"text":"• Federated Learning (McMahan et al. 2017)","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"• Federated Learning (McMahan et al. 2017)","autoResize":true},
+    {"type":"text","id":"t_r4","x":30,"y":885,"text":"• mTLS (RFC 8446)","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"• mTLS (RFC 8446)","autoResize":true},
+    {"type":"text","id":"t_r5","x":30,"y":905,"text":"• GDPR (EU Regulation 2016/679)","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"• GDPR (EU Regulation 2016/679)","autoResize":true},
+    {"type":"text","id":"t_r6","x":30,"y":925,"text":"• SOC 2 (AICPA)","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"• SOC 2 (AICPA)","autoResize":true}
+  ],
+  "appState": {
+    "viewBackgroundColor": "#ffffff"
+  }
+}

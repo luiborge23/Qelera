@@ -1,0 +1,71 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "hermes-agent",
+  "elements": [
+    {"type":"text","id":"t_title","x":250,"y":15,"text":"VISIONTRACK — ML/AI PIPELINE","fontSize":24,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"VISIONTRACK ML/AI PIPELINE","autoResize":true},
+
+    {"type":"rectangle","id":"r_input","x":20,"y":60,"width":380,"height":120,"strokeColor":"#1e1e1e","strokeWidth":2,"fillStyle":"none","strokeStyle":"dashed","roundness":{"type":2}},
+    {"type":"text","id":"t_input","x":30,"y":70,"text":"DATA INGESTION LAYER","fontSize":18,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"DATA INGESTION LAYER","autoResize":true},
+
+    {"type":"rectangle","id":"r_video","x":40,"y":90,"width":170,"height":80,"roundness":{"type":3},"backgroundColor":"#a5d8ff","fillStyle":"solid","boundElements":[{"id":"t_rv","type":"text"}]},
+    {"type":"text","id":"t_rv","x":55,"y":100,"width":140,"height":60,"text":"Video Stream\n(H.265/HEVC)\n1080p@60fps","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_video","originalText":"Video Stream\n(H.265/HEVC)\n1080p@60fps","autoResize":true},
+
+    {"type":"rectangle","id":"r_audio","x":230,"y":90,"width":150,"height":80,"roundness":{"type":3},"backgroundColor":"#a5d8ff","fillStyle":"solid","boundElements":[{"id":"t_ra","type":"text"}]},
+    {"type":"text","id":"t_ra","x":245,"y":100,"width":120,"height":60,"text":"Audio Stream\n(Mic Array)\n48kHz Stereo","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_audio","originalText":"Audio Stream\n(Mic Array)\n48kHz Stereo","autoResize":true},
+
+    {"type":"rectangle","id":"r_sensor","x":20,"y":210,"width":380,"height":100,"strokeColor":"#1e1e1e","strokeWidth":2,"fillStyle":"none","strokeStyle":"dashed","roundness":{"type":2}},
+    {"type":"text","id":"t_sensor","x":30,"y":220,"text":"SENSOR FUSION ENGINE","fontSize":18,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"SENSOR FUSION ENGINE","autoResize":true},
+
+    {"type":"rectangle","id":"r_imu","x":40,"y":240,"width":100,"height":60,"roundness":{"type":3},"backgroundColor":"#b2f2bb","fillStyle":"solid","boundElements":[{"id":"t_rim","type":"text"}]},
+    {"type":"text","id":"t_rim","x":55,"y":250,"width":70,"height":40,"text":"IMU\n(6-axis)","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_imu","originalText":"IMU\n(6-axis)","autoResize":true},
+
+    {"type":"rectangle","id":"r_gps","x":160,"y":240,"width":100,"height":60,"roundness":{"type":3},"backgroundColor":"#b2f2bb","fillStyle":"solid","boundElements":[{"id":"t_rg","type":"text"}]},
+    {"type":"text","id":"t_rg","x":175,"y":250,"width":70,"height":40,"text":"GPS\n(GNSS)","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_gps","originalText":"GPS\n(GNSS)","autoResize":true},
+
+    {"type":"rectangle","id":"r_wifi","x":280,"y":240,"width":100,"height":60,"roundness":{"type":3},"backgroundColor":"#b2f2bb","fillStyle":"solid","boundElements":[{"id":"t_rw","type":"text"}]},
+    {"type":"text","id":"t_rw","x":295,"y":250,"width":70,"height":40,"text":"WiFi\nRSSI","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_wifi","originalText":"WiFi\nRSSI","autoResize":true},
+
+    {"type":"rectangle","id":"r_fusion","x":20,"y":330,"width":380,"height":80,"roundness":{"type":3},"backgroundColor":"#d0bfff","fillStyle":"solid","boundElements":[{"id":"t_rf","type":"text"}]},
+    {"type":"text","id":"t_rf","x":35,"y":340,"width":350,"height":60,"text":"Multi-Modal Fusion (Transformer-based)\n• Attention Mechanism (Vaswani et al. 2017)\n• Cross-Modal Alignment\n• Temporal Synchronization\n• Kalman Filter + Particle Filter","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_fusion","originalText":"Multi-Modal Fusion (Transformer-based)\n• Attention Mechanism (Vaswani et al. 2017)\n• Cross-Modal Alignment\n• Temporal Synchronization\n• Kalman Filter + Particle Filter","autoResize":true},
+
+    {"type":"rectangle","id":"r_detection","x":20,"y":440,"width":380,"height":120,"strokeColor":"#1e1e1e","strokeWidth":2,"fillStyle":"none","strokeStyle":"dashed","roundness":{"type":2}},
+    {"type":"text","id":"t_detection","x":30,"y":450,"text":"OBJECT DETECTION & TRACKING","fontSize":18,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"OBJECT DETECTION & TRACKING","autoResize":true},
+
+    {"type":"rectangle","id":"r_yolo","x":40,"y":470,"width":170,"height":80,"roundness":{"type":3},"backgroundColor":"#ffd8a8","fillStyle":"solid","boundElements":[{"id":"t_ry","type":"text"}]},
+    {"type":"text","id":"t_ry","x":55,"y":480,"width":140,"height":60,"text":"YOLOv8-nano\n(INT8 Quantized)\n• Real-time Detection\n• 30+ FPS on Edge\n• COCO Dataset","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_yolo","originalText":"YOLOv8-nano\n(INT8 Quantized)\n• Real-time Detection\n• 30+ FPS on Edge\n• COCO Dataset","autoResize":true},
+
+    {"type":"rectangle","id":"r_tracker","x":230,"y":470,"width":150,"height":80,"roundness":{"type":3},"backgroundColor":"#ffd8a8","fillStyle":"solid","boundElements":[{"id":"t_rt","type":"text"}]},
+    {"type":"text","id":"t_rt","x":245,"y":480,"width":120,"height":60,"text":"DeepSORT Tracker\n• Re-ID Network\n• Kalman Filter\n• Hungarian Algorithm","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_tracker","originalText":"DeepSORT Tracker\n• Re-ID Network\n• Kalman Filter\n• Hungarian Algorithm","autoResize":true},
+
+    {"type":"rectangle","id":"r_qoe","x":20,"y":590,"width":380,"height":120,"strokeColor":"#1e1e1e","strokeWidth":2,"fillStyle":"none","strokeStyle":"dashed","roundness":{"type":2}},
+    {"type":"text","id":"t_qoe","x":30,"y":600,"text":"QoE MODELING & ANALYTICS","fontSize":18,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"QoE MODELING & ANALYTICS","autoResize":true},
+
+    {"type":"rectangle","id":"r_model1","x":40,"y":620,"width":170,"height":80,"roundness":{"type":3},"backgroundColor":"#c3fae8","fillStyle":"solid","boundElements":[{"id":"t_rm1","type":"text"}]},
+    {"type":"text","id":"t_rm1","x":55,"y":630,"width":140,"height":60,"text":"ITU-T P.1203 Model\n• Video Quality Estimation\n• PSNR, SSIM, VMAF\n• Netflix QoE Score","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_model1","originalText":"ITU-T P.1203 Model\n• Video Quality Estimation\n• PSNR, SSIM, VMAF\n• Netflix QoE Score","autoResize":true},
+
+    {"type":"rectangle","id":"r_model2","x":230,"y":620,"width":150,"height":80,"roundness":{"type":3},"backgroundColor":"#c3fae8","fillStyle":"solid","boundElements":[{"id":"t_rm2","type":"text"}]},
+    {"type":"text","id":"t_rm2","x":245,"y":630,"width":120,"height":60,"text":"LSTM Predictor\n• Temporal Modeling\n• Anomaly Detection\n• Predictive Analytics","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_model2","originalText":"LSTM Predictor\n• Temporal Modeling\n• Anomaly Detection\n• Predictive Analytics","autoResize":true},
+
+    {"type":"rectangle","id":"r_federated","x":20,"y":740,"width":380,"height":80,"roundness":{"type":3},"backgroundColor":"#ffd8a8","fillStyle":"solid","boundElements":[{"id":"t_rfed","type":"text"}]},
+    {"type":"text","id":"t_rfed","x":35,"y":750,"width":350,"height":60,"text":"Federated Learning Pipeline\n• Secure Aggregation (SecAgg+)\n• Differential Privacy (ε=0.1, δ=1e-5)\n• Model Versioning (MLflow)\n• Privacy-Preserving Updates","fontSize":13,"fontFamily":1,"strokeColor":"#1e1e1e","textAlign":"center","verticalAlign":"middle","containerId":"r_federated","originalText":"Federated Learning Pipeline\n• Secure Aggregation (SecAgg+)\n• Differential Privacy (ε=0.1, δ=1e-5)\n• Model Versioning (MLflow)\n• Privacy-Preserving Updates","autoResize":true},
+
+    {"type":"arrow","id":"a_v1","x":210,"y":130,"width=":20,"height":0,"points":[[0,0],[20,0]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_av1","type":"text"}]},
+    {"type":"arrow","id":"a_v2","x":210,"y":130,"width":20,"height":110,"points":[[0,0],[0,110]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_av2","type":"text"}]},
+    {"type":"arrow","id":"a_v3","x":210,"y":310,"width":20,"height":130,"points":[[0,0],[0,130]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_av3","type":"text"}]},
+    {"type":"arrow","id":"a_v4","x":210,"y":440,"width":20,"height":150,"points":[[0,0],[0,150]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_av4","type":"text"}]},
+    {"type":"arrow","id":"a_v5","x":210,"y":590,"width":20,"height":170,"points":[[0,0],[0,170]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_av5","type":"text"}]},
+    {"type":"arrow","id":"a_v6","x":210,"y":740,"width":20,"height":190,"points":[[0,0],[0,190]],"endArrowhead":"arrow","strokeStyle":"solid","boundElements":[{"id":"t_av6","type":"text"}]},
+
+    {"type":"text","id":"t_research","x":20,"y":850,"text":"PHD-LEVEL RESEARCH FOUNDATIONS","fontSize":16,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"PHD-LEVEL RESEARCH FOUNDATIONS","autoResize":true},
+    {"type":"text","id":"t_r1","x":30,"y":875,"text":"• YOLOv8 (Ultralytics, 2024)","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"• YOLOv8 (Ultralytics, 2024)","autoResize":true},
+    {"type":"text","id":"t_r2","x":30,"y":895,"text":"• DeepSORT (Wojke et al. 2017)","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"• DeepSORT (Wojke et al. 2017)","autoResize":true},
+    {"type":"text","id":"t_r3","x":30,"y":915,"text":"• Transformer (Vaswani et al. 2017)","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"• Transformer (Vaswani et al. 2017)","autoResize":true},
+    {"type":"text","id":"t_r4","x":30,"y":935,"text":"• Federated Learning (McMahan et al. 2017)","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"• Federated Learning (McMahan et al. 2017)","autoResize":true},
+    {"type":"text","id":"t_r5","x":30,"y":955,"text":"• SecAgg+ (Bonawitz et al. 2019)","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"• SecAgg+ (Bonawitz et al. 2019)","autoResize":true},
+    {"type":"text","id":"t_r6","x":30,"y":975,"text":"• Differential Privacy (Dwork 2006)","fontSize":12,"fontFamily":1,"strokeColor":"#1e1e1e","originalText":"• Differential Privacy (Dwork 2006)","autoResize":true}
+  ],
+  "appState": {
+    "viewBackgroundColor": "#ffffff"
+  }
+}
