@@ -1,178 +1,91 @@
 # Qelera
 
-Distributed real-time vision and QoE monitoring platform for video streaming quality assessment across Android devices, ESP32 sensors, and Raspberry Pi gateways.
+### Universal Social Media QoE Benchmarking & UX Platform
 
-## Architecture Overview
+> **Measure the Experience, Not Just the Network.**
 
-```
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│  Android SDK    │    │  ESP32 Sensors  │    │  Raspberry Pi   │
-│  (Qelera   │    │  (BLE/GPIO      │    │  Gateway        │
-│   Engine)       │    │   Sensors)      │    │  (MQTT Broker)  │
-└────────┬────────┘    └────────┬────────┘    └────────┬────────┘
-         │                      │                      │
-         │   HTTPS/TLS          │   BLE                │   MQTT
-         ▼                      ▼                      ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                        Kong Gateway                             │
-│                 (API Gateway + Auth + Rate Limit)               │
-└──────────────────────────┬──────────────────────────────────────┘
-                           │
-         ┌─────────────────┼─────────────────┐
-         │                   │                │
-         ▼                   ▼                ▼
-┌────────────────┐  ┌────────────────┐  ┌────────────────┐
-│  FastAPI       │  │  Kafka         │  │  Redis         │
-│  Backend       │  │  (Event Bus)   │  │  (Cache/Queue) │
-└────────┬───────┘  └────────┬───────┘  └────────┬───────┘
-         │                    │                    │
-         ▼                    ▼                    ▼
-┌────────────────┐  ┌────────────────┐  ┌────────────────┐
-│  TimescaleDB   │  │  ML Pipeline   │  │  Kibana/ELK    │
-│  (PostgreSQL)  │  │  (YOLOv8→TF)   │  │  (Logging)     │
-└────────────────┘  └────────────────┘  └────────────────┘
-         ▲
-         │
-┌────────────────┐
-│  HashiCorp     │
-│  Vault         │
-│  (Secrets)     │
-└────────────────┘
-```
+Qelera is a next-generation Quality of Experience (QoE) monitoring platform designed to isolate and measure the true performance of social media applications, independent of network conditions. By decoupling app-level metrics from network noise (WiFi, 4G, 5G), Qelera provides actionable insights for social platforms, device OEMs, and network operators.
 
-## Tech Stack
+---
+
+## 🚀 Key Features
+
+*   **App-Agnostic QoE:** Measures performance across any social media app (Meta, Snap, TikTok, X, etc.) without requiring deep integration with each platform.
+*   **Network-Agnostic:** Isolates app performance from network latency, jitter, and packet loss to reveal the true user experience.
+*   **Real-Time ML Scoring:** Uses YOLOv8-based ML pipelines to analyze frame drops, UI freezes, and rendering delays in real-time.
+*   **Cross-Platform:** Comprehensive Android SDK for instrumentation, paired with a robust FastAPI backend and React dashboard.
+
+## 🛠️ Tech Stack
 
 | Component | Technology |
-|-----------|-----------|
-| API Gateway | Kong Gateway 3.6+ |
-| Backend | FastAPI + Python 3.12 |
-| Database | TimescaleDB (PostgreSQL 16) |
-| Cache/Queue | Redis 7.2 |
-| Event Bus | Apache Kafka 3.6 |
-| Logging | ELK Stack (Elasticsearch 8.x, Logstash, Kibana) |
-| Secrets | HashiCorp Vault 1.15+ |
-| Mobile SDK | Android (Kotlin) |
-| Edge ML | YOLOv8 → TensorFlow Lite |
-| IoT Firmware | ESP-IDF (ESP32), Raspberry Pi OS |
-| Frontend | React 18 + TypeScript + Vite |
-| Container | Docker Compose (local), Kubernetes (prod) |
+| :--- | :--- |
+| **Mobile SDK** | Kotlin (Android), YOLOv8 (ML Inference) |
+| **Backend** | FastAPI, Python, TimescaleDB |
+| **Frontend** | React, TypeScript, D3.js (Data Viz) |
+| **Infrastructure** | Docker, Kong (API Gateway), Vault |
+| **Monitoring** | ELK Stack (Elasticsearch, Logstash, Kibana) |
 
-## Project Structure
+## 🏗️ Architecture
 
 ```
-qelera/
-├── docker-compose.yml              # Full orchestration
-├── kong/
-│   ├── kong.yml                    # Gateway config
-│   └── plugins/                    # Custom plugins
-├── backend/
-│   ├── app/
-│   │   ├── main.py                 # FastAPI app
-│   │   ├── api/                    # Route handlers
-│   │   ├── models/                 # SQLAlchemy models
-│   │   ├── schemas/                # Pydantic schemas
-│   │   ├── services/               # Business logic
-│   │   ├── auth/                   # JWT auth
-│   │   └── config.py               # Settings
-│   ├── tests/
-│   ├── requirements.txt
-│   └── Dockerfile
-├── db/
-│   ├── migrations/                 # SQL migrations
-│   └── seed.sql                    # Seed data
-├── android-sdk/
-│   ├── VisionTrackCore/
-│   ├── VisionTrackEngine/
-│   └── VisionTrackSensors/
-├── ml-pipeline/
-│   ├── yolo_training/
-│   ├── conversion/
-│   └── edge_detection/
-├── firmware/
-│   ├── esp32/                      # ESP32 firmware (ESP-IDF)
-│   └── raspberry-pi/               # Pi gateway
-├── frontend/
-│   ├── src/
-│   ├── public/
-│   └── Dockerfile
-├── vault/
-│   ├── policies/
-│   └── init.sh
-└── docs/
-    ├── architecture.md
-    └── api-reference.md
+[Android SDK] → (Instrumentation) → [FastAPI Backend] → [TimescaleDB]
+       ↓                              ↓                       ↓
+[ML Pipeline] ← (QoE Scoring) ← [Event Stream] ← [React Dashboard]
 ```
 
-## Quick Start
+1.  **Android SDK:** Captures sensor data, network metrics, and UI performance events.
+2.  **ML Pipeline:** Processes data using YOLOv8 to detect rendering anomalies and frame drops.
+3.  **Backend:** Aggregates data, scores QoE (0-100), and provides RESTful APIs.
+4.  **Dashboard:** Visualizes real-time QoE trends and historical benchmarks.
 
+## 🚀 Getting Started
+
+### Prerequisites
+*   Python 3.10+
+*   Android Studio (for SDK development)
+*   Docker & Docker Compose
+
+### 1. Clone the Repository
 ```bash
-# Start all services
-docker compose up -d
-
-# Run migrations
-docker compose exec backend alembic upgrade head
-
-# Run tests
-docker compose exec backend pytest
-
-# Access dashboard
-open http://localhost:3000
-
-# Access Kibana
-open http://localhost:5601
-
-# Access Vault
-open http://localhost:8200
+git clone https://github.com/luiborge23/qelera.git
+cd qelera
 ```
 
-## API Endpoints
+### 2. Setup Backend
+```bash
+cd software/backend
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/api/v1/auth/register` | Register new user |
-| POST | `/api/v1/auth/login` | Login (JWT) |
-| POST | `/api/v1/auth/refresh` | Refresh token |
-| GET | `/api/v1/sessions` | List sessions |
-| POST | `/api/v1/sessions` | Create session |
-| GET | `/api/v1/sessions/{id}` | Get session details |
-| POST | `/api/v1/sessions/{id}/start` | Start recording |
-| POST | `/api/v1/sessions/{id}/stop` | Stop recording |
-| GET | `/api/v1/alerts` | List alerts |
-| POST | `/api/v1/alerts` | Create alert |
-| GET | `/api/v1/devices` | List devices |
-| POST | `/api/v1/devices/register` | Register device |
-| POST | `/api/v1/qoe/report` | Submit QoE metrics |
-| POST | `/api/v1/detections` | Submit detections |
+### 3. Setup Android SDK
+Open the `software/android/sdk` module in Android Studio and sync Gradle files.
 
-## Phases
+### 4. Run Infrastructure
+```bash
+docker-compose up -d
+```
 
-### Phase 1: Foundation (Current)
-- [x] DB Schema
-- [ ] Kong Gateway
-- [ ] ELK Stack
-- [ ] Vault
-- [ ] Backend API
-- [ ] Android SDK
-- [ ] ML Pipeline
-- [ ] ESP32 Firmware
-- [ ] Raspberry Pi Firmware
-- [ ] React Dashboard
-- [ ] Docker Compose
-- [ ] Test Suite
+## 📅 Roadmap
 
-### Phase 2: Production Hardening
-- [ ] Kubernetes manifests
-- [ ] CI/CD pipelines
-- [ ] Monitoring & alerting
-- [ ] Load testing
-- [ ] Security audit
+*   [x] **Project Rebranding:** Migrate from VisionTrack to Qelera.
+*   [ ] **Backend Core:** Implement FastAPI endpoints and TimescaleDB schema.
+*   [ ] **Android SDK:** Finalize instrumentation and ML inference integration.
+*   [ ] **ML Pipeline:** Train and export YOLOv8 QoE scoring models.
+*   [ ] **Dashboard:** Build React frontend for real-time visualization.
 
-### Phase 3: Scale & Optimize
-- [ ] Federated learning
-- [ ] Multi-tenant support
-- [ ] Edge caching
-- [ ] Performance tuning
+## 📄 License
 
-## License
+This project is proprietary. Unauthorized use, distribution, or modification is prohibited.
 
-MIT
+## 📞 Contact
+
+For inquiries, partnerships, or support:
+*   **Website:** [qelera.com](https://qelera.com)
+*   **Email:** contact@qelera.com
+
+---
+
+*Qelera — Measuring the Experience.*
